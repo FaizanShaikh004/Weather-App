@@ -1,0 +1,73 @@
+/* Body & Card Styling */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+  background-image: url(https://imgcdn.stablediffusionweb.com/2024/3/19/49925953-5f53-4394-9e6a-52b3759cebc4.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.2); /* Glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#output {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #output {
+    font-size: 16px;
+  }
+}
