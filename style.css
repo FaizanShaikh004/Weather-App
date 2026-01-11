@@ -1,90 +1,87 @@
-/* Body & Card Styling */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
   background-image: url(https://imgcdn.stablediffusionweb.com/2024/3/19/49925953-5f53-4394-9e6a-52b3759cebc4.jpg);
   background-repeat: no-repeat;
-  background-size:cover;
-  
+  background-size: cover;
+  background-position: center;
+
   font-family: Arial, sans-serif;
 }
 
+/* Glass Card */
 .card {
-  width: 300px;
-  padding: 20px;
+  width: 100%;
+  max-width: 420px;
+  padding: 22px;
   text-align: center;
 
-  background: rgba(255,255,255,0.2); /* Glass effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-  border-radius: 15px;
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
 
   color: white;
 }
 
+/* ✅ INPUT FIX (main issue yahin tha) */
 input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 12px 14px;     /* right-left space FIX */
+  margin: 12px 0;
+
   border: none;
   border-radius: 8px;
   outline: none;
-  box-sizing: border-box;
+
+  font-size: 16px;
 }
 
+/* Button */
 button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  margin-top: 5px;
+
   border: none;
   border-radius: 8px;
-  background: #fff;
+  background: #ffffff;
+
   font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
 }
 
+/* Output */
 #output {
   margin-top: 15px;
   font-size: 18px;
 }
 
-@media (max-width: 500px) {
-  .card {
-    width: 90%;
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  input, button {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  #output {
-    font-size: 16px;
-  } */
-
-@media (max-width: 500px) {
+/* 📱 Mobile fine tuning */
+@media (max-width: 480px) {
   body {
-    padding: 8px;
+    align-items: flex-start;
   }
 
   .card {
-    width: 100%;
-    max-width: none;
+    margin-top: 40px;
     padding: 20px;
-    font-size: 1.05rem;
   }
 
-  input, button {
-    padding: 12px;
-    font-size: 1rem;
+  input {
+    padding: 13px 16px;   /* mobile me aur comfortable */
   }
 }
