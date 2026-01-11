@@ -37,6 +37,7 @@ input {
   border: none;
   border-radius: 8px;
   outline: none;
+  box-sizing: border-box;
 }
 
 button {
@@ -54,7 +55,7 @@ button {
   font-size: 18px;
 }
 
-/* Mobile Responsive */
+/* /* Mobile Responsive
 @media (max-width: 500px) {
   .card {
     width: 90%;
@@ -69,5 +70,22 @@ button {
 
   #output {
     font-size: 16px;
+  } */
+
+@media (max-width: 500px) {
+  body {
+    padding: 8px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+    font-size: 1.05rem;
+  }
+
+  input, button {
+    padding: 12px;
+    font-size: 1rem;
   }
 }
